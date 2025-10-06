@@ -134,6 +134,6 @@ for i in range(10):  # find 10 shortest paths
         length = opt.lower(obj)
         lengths.append(length)
 
-        opt.add(Or([Not(edges_z3[e]) for e in path]))
+        opt.add(Not(And([edges_z3[e] for e in path])))
 
         print(f"path {i}: length: {length}, route:", path)
