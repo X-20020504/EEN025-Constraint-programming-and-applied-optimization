@@ -151,6 +151,14 @@ CostsVertical = [19, 17, 17, 17]
 graph = make_graph()
 
 if __name__ == "__main__":
-    start = {"i": 2, "j": 0}
-    end = {"i": 2, "j": 7}
+    coordinates = {"warehouse": {"i": 2, "j": 0},
+                   "delivery": {"i": 2, "j": 7},
+                   "M1": {"i": 1, "j": 4},
+                   "M2": {"i": 3, "j": 3},
+                   "M3": {"i": 3, "j": 5},
+                   "M4": {"i": 0, "j": 2},
+                   "M5": {"i": 2, "j": 2},
+                   "M6": {"i": 0, "j": 6}}
+    start = coordinates["M6"]
+    end = coordinates["delivery"]
     print(A_star(start, end))
