@@ -1,7 +1,4 @@
-# task2_robot_sorting_z3.py
-# Robot sorting problem (Task 2) -- Z3 implementation
-# Supports two objectives: "moves" (min total moves) and "manhattan" (min total Manhattan distance)
-# Author: (you)
+
 from z3 import *
 
 def index_of(x, y, n):
@@ -175,3 +172,4 @@ if __name__ == "__main__":
     # Try minimizing moves
     model, plan = robot_sorting_z3(B=B, n=n, T=T, init_positions=init, goal_positions=goal,
                                   objective='moves', optimize=True, debug=True)
+
